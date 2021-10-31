@@ -1,4 +1,4 @@
-interface ImportMetaEnv extends Readonly<Record<string, string>> {
+interface ImportMetaEnv {
   readonly VITE_WEBSOCKET_URL: string;
   readonly VITE_SIGNIN_URL: string;
   // more env variables...
