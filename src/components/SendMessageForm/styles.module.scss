@@ -90,7 +90,7 @@
     color: #e1e1e6;
     font-size: 16px;
     line-height: 24px;
-    
+
     &:focus {
       outline: 0;
     }
@@ -101,9 +101,33 @@
   }
 
   button {
+    border-radius: 8px;
     align-self: flex-end;
     border: 0;
     background: #ff008e;
+    margin: 24px;
+    cursor: pointer;
+    padding: 0 32px;
+    height: 40px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+  .download {
+    border-radius: 8px;
+    align-self: flex-end;
+    border: 0;
+    background: #ffcd1e;
     margin: 24px;
     cursor: pointer;
     padding: 0 32px;

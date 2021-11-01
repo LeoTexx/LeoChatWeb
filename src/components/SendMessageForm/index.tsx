@@ -26,7 +26,10 @@ export function SendMessageForm({ isDesktop }: BoxProps) {
   }
 
   return (
-    <div className={styles.sendMessageFormWrapper}>
+    <div
+      className={styles.sendMessageFormWrapper}
+      style={{ width: !isDesktop ? "100vw" : "" }}
+    >
       <button onClick={signOut} className={styles.signOutButton}>
         <VscSignOut size="32" />
       </button>
@@ -52,8 +55,22 @@ export function SendMessageForm({ isDesktop }: BoxProps) {
           onChange={(event) => setMessage(event.target.value)}
           value={message}
         />
-
-        <button type="submit">Enviar mensagem</button>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <a
+            className="download"
+            href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40leo.texx/chatdoleo-32bbf8dbcf774071a26754d00f7afc8c-signed.apk"
+          >
+            <div>Download</div>
+          </a>
+          <button type="submit">Enviar mensagem</button>
+        </div>
       </form>
     </div>
   );
