@@ -34,18 +34,7 @@ export function MessageList({ isDesktop }: MessageProps) {
     setInterval(() => {
       if (messagesQueue.length > 0) {
         setMessages((prevState) =>
-          [
-            messagesQueue[0],
-            prevState[0],
-            prevState[1],
-            prevState[2],
-            prevState[3],
-            prevState[4],
-            prevState[5],
-            prevState[6],
-            prevState[7],
-            prevState[8],
-          ].filter(Boolean)
+          [messagesQueue[0], prevState[0], prevState[1]].filter(Boolean)
         );
 
         messagesQueue.shift();
@@ -54,7 +43,7 @@ export function MessageList({ isDesktop }: MessageProps) {
   }, []);
 
   useEffect(() => {
-    api.get<Message[]>("messages/last10").then((response) => {
+    api.get<Message[]>("messages/last3").then((response) => {
       setMessages(response.data);
     });
   }, []);
