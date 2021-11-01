@@ -64,7 +64,7 @@ export function SendMessageForm({ isDesktop }: BoxProps) {
           }}
         >
           <a
-            className="download"
+            className={styles.download}
             href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40leo.texx/chatdoleo-32bbf8dbcf774071a26754d00f7afc8c-signed.apk"
           >
             <div>Download</div>
