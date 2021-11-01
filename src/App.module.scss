@@ -9,6 +9,9 @@
   position: relative;
   @media (max-width: 920px) {
     grid-template-columns: 1fr;
+    overflow-x: hidden;
+    width: 100vw;
+    max-width: 100%;
   }
 }
 
