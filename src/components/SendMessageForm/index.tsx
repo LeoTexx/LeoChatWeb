@@ -2,9 +2,14 @@ import { useContext, useState, FormEvent } from "react";
 import { VscGithubInverted, VscSignOut } from "react-icons/vsc";
 import { AuthContext } from "../../contexts/auth";
 import { api } from "../../services/api";
+import { MessageList } from "../MessageList";
 import styles from "./styles.module.scss";
 
-export function SendMessageForm() {
+type BoxProps = {
+  isDesktop: boolean;
+};
+
+export function SendMessageForm({ isDesktop }: BoxProps) {
   const { user, signOut } = useContext(AuthContext);
   const [message, setMessage] = useState("");
 
@@ -36,7 +41,7 @@ export function SendMessageForm() {
           {user?.login}
         </span>
       </header>
-
+      {!isDesktop && <MessageList />}
       <form onSubmit={handleSendMessage} className={styles.sendMessageForm}>
         <label htmlFor="message">Mensagem</label>
 
