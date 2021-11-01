@@ -25,7 +25,7 @@ export function App() {
         !!user ? styles.contentSigned : ""
       }`}
     >
-      {isDesktop && <MessageList />}
+      {isDesktop && <MessageList isDesktop={isDesktop} />}
       {!!user ? <SendMessageForm isDesktop={isDesktop} /> : <LoginBox />}
     </main>
   );

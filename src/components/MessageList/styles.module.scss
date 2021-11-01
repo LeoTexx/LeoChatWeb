@@ -1,13 +1,11 @@
 .messageListWrapper {
   display: flex;
   flex-direction: column;
-
+  padding-top: 16px;
   justify-content: space-between;
   align-items: flex-start;
-
-  > svg {
-    height: 28px;
-    margin: 32px 0;
+  @media (max-width: 920) {
+    align-items: center;
   }
 }
 
@@ -16,15 +14,36 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 40px;
   flex: 1;
+  margin-top: 16px;
+
+  .messageContainer {
+    background-image: linear-gradient(
+      to right,
+      rgba(216, 0, 135, 1) 0%,
+      rgba(239, 201, 57, 1) 100%
+    );
+    border-radius: 24px;
+    box-sizing: border-box;
+
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 4px;
+    position: relative;
+    height: 100%;
+    width: 440px;
+    z-index: 2;
+  }
 
   .message {
-    max-width: 440px;
-
-    &:nth-child(2) {
-      margin-left: 80px;
-    }
+    background: #121214;
+    border-radius: 16px;
+    padding: 8px;
+    height: 100%;
+    transition: background 0.5s ease;
+    width: 100%;
 
     .messageContent {
       font-size: 20px;

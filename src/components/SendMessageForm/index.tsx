@@ -41,7 +41,7 @@ export function SendMessageForm({ isDesktop }: BoxProps) {
           {user?.login}
         </span>
       </header>
-      {!isDesktop && <MessageList />}
+      {!isDesktop && <MessageList isDesktop={isDesktop} />}
       <form onSubmit={handleSendMessage} className={styles.sendMessageForm}>
         <label htmlFor="message">Mensagem</label>
 
