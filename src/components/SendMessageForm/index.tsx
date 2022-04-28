@@ -46,12 +46,12 @@ export function SendMessageForm({ isDesktop }: BoxProps) {
       </header>
       {!isDesktop && <MessageList isDesktop={isDesktop} />}
       <form onSubmit={handleSendMessage} className={styles.sendMessageForm}>
-        <label htmlFor="message">Mensagem</label>
+        <label htmlFor="message">Message</label>
 
         <textarea
           name="message"
           id="message"
-          placeholder="Qual a sua dúvida??"
+          placeholder="What do you want to tell me??"
           onChange={(event) => setMessage(event.target.value)}
           value={message}
         />
@@ -65,11 +65,11 @@ export function SendMessageForm({ isDesktop }: BoxProps) {
         >
           <a
             className={styles.download}
-            href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40leo.texx/chatdoleo-32bbf8dbcf774071a26754d00f7afc8c-signed.apk"
+            href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40leo.texx/chatdoleo-3cd2962d0c0b477ab3561036fcf68eae-signed.apk"
           >
             <div>Download</div>
           </a>
-          <button type="submit">Enviar mensagem</button>
+          <button type="submit">Send</button>
         </div>
       </form>
     </div>
